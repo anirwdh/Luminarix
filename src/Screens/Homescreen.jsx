@@ -53,6 +53,52 @@ const Homescreen = () => {
           min-height: 44px;
           min-width: 44px;
         }
+        
+        /* Mobile hero adjustments */
+        .hero-title {
+          font-size: clamp(1.8rem, 5vw, 3rem) !important;
+          line-height: 1.1 !important;
+          gap: 0.5rem !important;
+          flex-direction: column !important;
+        }
+        
+        .hero-subtitle {
+          font-size: clamp(0.7rem, 1.2vw, 1.2rem) !important;
+          margin-bottom: clamp(-1.5rem, -2vw, -2rem) !important;
+        }
+        
+        .hero-description {
+          font-size: clamp(0.7rem, 1.3vw, 1.2rem) !important;
+          max-width: 90vw !important;
+          padding: 0 1rem !important;
+        }
+        
+        .responsive-container {
+          padding: 0 1rem !important;
+          height: auto !important;
+          min-height: 100vh !important;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .hero-title {
+          font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+          gap: 0.25rem !important;
+        }
+        
+        .hero-subtitle {
+          font-size: clamp(0.65rem, 1vw, 1rem) !important;
+          margin-bottom: clamp(-1rem, -1.5vw, -1.5rem) !important;
+        }
+        
+        .hero-description {
+          font-size: clamp(0.65rem, 1.2vw, 1rem) !important;
+          padding: 0 0.75rem !important;
+        }
+        
+        .responsive-container {
+          padding: 0 0.75rem !important;
+        }
       }
     `;
     document.head.appendChild(style);
@@ -137,7 +183,12 @@ const Homescreen = () => {
         <div className="text-center" style={{ 
           maxWidth: 'min(90vw, 1400px)', 
           margin: '0 auto',
-          width: '100%'
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100%'
         }}>
           {/* Subtitle */}
           <h2 
@@ -158,11 +209,17 @@ const Homescreen = () => {
           {/* Main Title */}
           <h1 
             style={{
-              fontSize: 'clamp(3rem, 8vw, 12rem)',
+              fontSize: 'clamp(4rem, 8vw, 8rem)',
               fontWeight: '900',
-              lineHeight: '0.9',
+              lineHeight: '1.2',
               marginBottom: 'clamp(1.5rem, 3vw, 3rem)',
-              textAlign: 'center'
+              textAlign: 'center',
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+              gap: '1rem'
             }}
           >
             <span 
@@ -171,8 +228,7 @@ const Homescreen = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                display: 'inline-block',
-                marginRight: '2rem'
+                display: 'inline-block'
               }}
             >
               Creative
