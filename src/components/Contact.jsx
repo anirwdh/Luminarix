@@ -177,24 +177,23 @@ const Contact = () => {
             borderRadius: '50%',
             filter: 'blur(30px)'
           }}></div>
-          
-
         </div>
       </div>
 
-              {/* Main Content */}
-        <div style={{ 
-          display: 'flex', 
-          padding: '4rem',
-          gap: '4rem',
-          maxWidth: '1600px',
-          margin: '0 auto',
-          position: 'relative',
-          zIndex: 30
-        }}>
+      {/* Main Content */}
+      <div className="contact-container" style={{ 
+        display: 'flex', 
+        flexDirection: 'row',
+        padding: 'clamp(2rem, 4vw, 4rem)',
+        gap: 'clamp(2rem, 4vw, 4rem)',
+        maxWidth: '1600px',
+        margin: '0 auto',
+        position: 'relative',
+        zIndex: 30
+      }}>
         
         {/* Left Section - Contact Information */}
-        <div style={{ flex: '1', paddingTop: '2rem' }}>
+        <div className="contact-info" style={{ flex: '1', paddingTop: '2rem' }}>
           {/* Breadcrumbs */}
           <div style={{ 
             fontSize: '0.875rem', 
@@ -206,10 +205,10 @@ const Contact = () => {
           
           {/* Main Heading */}
           <h1 style={{ 
-            fontSize: 'clamp(2.5rem, 5vw, 4rem)', 
+            fontSize: 'clamp(2rem, 5vw, 4rem)', 
             fontWeight: '700', 
             lineHeight: '1.1',
-            marginBottom: '3rem',
+            marginBottom: 'clamp(2rem, 4vw, 3rem)',
             background: 'linear-gradient(135deg, #ffffff 0%, #00d4aa 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
@@ -219,30 +218,30 @@ const Contact = () => {
           </h1>
           
           {/* Contact Details */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(1.5rem, 3vw, 2rem)' }}>
             <div>
-              <div style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '0.5rem' }}>
+              <div style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '0.5rem', fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }}>
                 Prefer a call?
               </div>
-              <div style={{ fontSize: '1rem', fontWeight: '500' }}>
+              <div style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1rem)', fontWeight: '500' }}>
                 +91 9027224030
               </div>
             </div>
             
             <div>
-              <div style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '0.5rem' }}>
+              <div style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '0.5rem', fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }}>
                 Drop us a line at
               </div>
-              <div style={{ fontSize: '1rem', fontWeight: '500' }}>
+              <div style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1rem)', fontWeight: '500' }}>
                 hello@luminarix.com
               </div>
             </div>
             
             <div>
-              <div style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '0.5rem' }}>
+              <div style={{ color: 'rgba(255, 255, 255, 0.7)', marginBottom: '0.5rem', fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }}>
                 Drop by our office
               </div>
-              <div style={{ fontSize: '1rem', fontWeight: '500' }}>
+              <div style={{ fontSize: 'clamp(0.875rem, 1.5vw, 1rem)', fontWeight: '500' }}>
                 70-72 sector 63.<br />
                 
               </div>
@@ -251,12 +250,12 @@ const Contact = () => {
         </div>
         
         {/* Right Section - Contact Form */}
-        <div style={{ flex: '1' }}>
+        <div className="contact-form" style={{ flex: '1' }}>
           {/* Form Title */}
           <h2 style={{ 
-            fontSize: '1.25rem', 
+            fontSize: 'clamp(1rem, 2vw, 1.25rem)', 
             fontWeight: '600', 
-            marginBottom: '1.5rem' 
+            marginBottom: 'clamp(1rem, 2vw, 1.5rem)' 
           }}>
             Enter your contact details
           </h2>
@@ -265,9 +264,9 @@ const Contact = () => {
           <form onSubmit={handleFormSubmit} style={{ 
             display: 'flex', 
             flexDirection: 'column', 
-            gap: '1rem',
+            gap: 'clamp(0.75rem, 1.5vw, 1rem)',
             background: 'rgba(255, 255, 255, 0.05)',
-            padding: '3rem',
+            padding: 'clamp(1.5rem, 3vw, 3rem)',
             borderRadius: '0.75rem',
             border: '1px solid rgba(255, 255, 255, 0.1)'
           }}>
@@ -276,7 +275,7 @@ const Contact = () => {
               <label style={{ 
                 display: 'block', 
                 marginBottom: '0.5rem', 
-                fontSize: '0.75rem',
+                fontSize: 'clamp(0.7rem, 1.2vw, 0.75rem)',
                 color: 'rgba(255, 255, 255, 0.8)'
               }}>
                 Your name *
@@ -287,23 +286,23 @@ const Contact = () => {
                 required
                 style={{
                   width: '100%',
-                  padding: '0.75rem',
+                  padding: 'clamp(0.6rem, 1.2vw, 0.75rem)',
                   backgroundColor: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '0.5rem',
                   color: '#ffffff',
-                  fontSize: '0.875rem'
+                  fontSize: 'clamp(0.8rem, 1.5vw, 0.875rem)'
                 }}
               />
             </div>
             
             {/* Half Width Inputs Row */}
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'space-between' }}>
-              <div style={{ width: 'calc(50% - 2rem)' }}>
+            <div className="form-row" style={{ display: 'flex', gap: 'clamp(0.75rem, 1.5vw, 1rem)', justifyContent: 'space-between' }}>
+              <div style={{ width: 'calc(50% - 0.5rem)' }}>
                 <label style={{ 
                   display: 'block', 
                   marginBottom: '0.5rem', 
-                  fontSize: '0.75rem',
+                  fontSize: 'clamp(0.7rem, 1.2vw, 0.75rem)',
                   color: 'rgba(255, 255, 255, 0.8)'
                 }}>
                   Your email *
@@ -314,12 +313,12 @@ const Contact = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '0.75rem',
+                    padding: 'clamp(0.6rem, 1.2vw, 0.75rem)',
                     backgroundColor: 'rgba(255, 255, 255, 0.05)',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     borderRadius: '0.5rem',
                     color: '#ffffff',
-                    fontSize: '0.875rem'
+                    fontSize: 'clamp(0.8rem, 1.5vw, 0.875rem)'
                   }}
                 />
               </div>
@@ -328,7 +327,7 @@ const Contact = () => {
                 <label style={{ 
                   display: 'block', 
                   marginBottom: '0.5rem', 
-                  fontSize: '0.75rem',
+                  fontSize: 'clamp(0.7rem, 1.2vw, 0.75rem)',
                   color: 'rgba(255, 255, 255, 0.8)'
                 }}>
                   Your phone *
@@ -339,12 +338,12 @@ const Contact = () => {
                   required
                   style={{
                     width: '100%',
-                    padding: '0.75rem',
+                    padding: 'clamp(0.6rem, 1.2vw, 0.75rem)',
                     backgroundColor: 'rgba(255, 255, 255, 0.05)',
                     border: '1px solid rgba(255, 255, 255, 0.2)',
                     borderRadius: '0.5rem',
                     color: '#ffffff',
-                    fontSize: '0.875rem'
+                    fontSize: 'clamp(0.8rem, 1.5vw, 0.875rem)'
                   }}
                 />
               </div>
@@ -354,7 +353,7 @@ const Contact = () => {
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                 <label style={{ 
-                  fontSize: '0.75rem',
+                  fontSize: 'clamp(0.7rem, 1.2vw, 0.75rem)',
                   color: 'rgba(255, 255, 255, 0.8)'
                 }}>
                   Company name / project name
@@ -378,18 +377,18 @@ const Contact = () => {
                 type="text" 
                 style={{
                   width: '100%',
-                  padding: '0.75rem',
+                  padding: 'clamp(0.6rem, 1.2vw, 0.75rem)',
                   backgroundColor: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '0.5rem',
                   color: '#ffffff',
-                  fontSize: '0.875rem'
+                  fontSize: 'clamp(0.8rem, 1.5vw, 0.875rem)'
                 }}
               />
             </div>
             
             {/* Checkboxes */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '0.75rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.5rem, 1vw, 0.75rem)', marginTop: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
               <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer' }}>
                 <div style={{ 
                   width: '16px', 
@@ -403,7 +402,7 @@ const Contact = () => {
                 }}>
                   <span style={{ color: '#000000', fontSize: '0.75rem', fontWeight: 'bold' }}>✓</span>
                 </div>
-                <span style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+                <span style={{ fontSize: 'clamp(0.7rem, 1.2vw, 0.75rem)', color: 'rgba(255, 255, 255, 0.8)' }}>
                   I have read & I agree with the privacy policy
                 </span>
               </label>
@@ -421,7 +420,7 @@ const Contact = () => {
                 }}>
                   <span style={{ color: '#000000', fontSize: '0.75rem', fontWeight: 'bold' }}>✓</span>
                 </div>
-                <span style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.8)' }}>
+                <span style={{ fontSize: 'clamp(0.7rem, 1.2vw, 0.75rem)', color: 'rgba(255, 255, 255, 0.8)' }}>
                   I have read & I agree with the terms & conditions
                 </span>
               </label>
@@ -435,12 +434,12 @@ const Contact = () => {
                 backgroundColor: 'transparent',
                 color: '#ffffff',
                 border: '1px solid #00d4aa',
-                padding: '0.75rem 1.5rem',
+                padding: 'clamp(0.6rem, 1.2vw, 0.75rem) clamp(1rem, 2vw, 1.5rem)',
                 borderRadius: '0.5rem',
-                fontSize: '0.875rem',
+                fontSize: 'clamp(0.8rem, 1.5vw, 0.875rem)',
                 fontWeight: '500',
                 cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                marginTop: '0.75rem',
+                marginTop: 'clamp(0.5rem, 1vw, 0.75rem)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -457,11 +456,11 @@ const Contact = () => {
                 backgroundColor: 'rgba(0, 212, 170, 0.1)',
                 border: '1px solid #00d4aa',
                 borderRadius: '0.5rem',
-                padding: '1rem',
+                padding: 'clamp(0.75rem, 1.5vw, 1rem)',
                 color: '#00d4aa',
-                fontSize: '0.875rem',
+                fontSize: 'clamp(0.8rem, 1.5vw, 0.875rem)',
                 textAlign: 'center',
-                marginTop: '1rem'
+                marginTop: 'clamp(0.75rem, 1.5vw, 1rem)'
               }}>
                 Message sent successfully! We'll get back to you soon.
               </div>
@@ -473,11 +472,11 @@ const Contact = () => {
                 backgroundColor: 'rgba(255, 0, 0, 0.1)',
                 border: '1px solid #ff0000',
                 borderRadius: '0.5rem',
-                padding: '1rem',
+                padding: 'clamp(0.75rem, 1.5vw, 1rem)',
                 color: '#ff0000',
-                fontSize: '0.875rem',
+                fontSize: 'clamp(0.8rem, 1.5vw, 0.875rem)',
                 textAlign: 'center',
-                marginTop: '1rem'
+                marginTop: 'clamp(0.75rem, 1.5vw, 1rem)'
               }}>
                 {formErrors.general}
               </div>
@@ -485,17 +484,17 @@ const Contact = () => {
           </form>
           
           {/* Additional Contact Options */}
-          <div style={{ marginTop: '2rem' }}>
-            <div style={{ 
+          <div style={{ marginTop: 'clamp(1.5rem, 3vw, 2rem)' }}>
+            <div className="contact-options" style={{ 
               display: 'flex', 
               justifyContent: 'space-between', 
               alignItems: 'flex-start',
-              gap: '1rem'
+              gap: 'clamp(0.75rem, 1.5vw, 1rem)'
             }}>
               {/* Start a project */}
               <div style={{ flex: '1', textAlign: 'center' }}>
                 <div style={{ 
-                  fontSize: '0.65rem', 
+                  fontSize: 'clamp(0.6rem, 1.2vw, 0.65rem)', 
                   color: 'rgba(255, 255, 255, 0.6)', 
                   textTransform: 'uppercase',
                   marginBottom: '0.5rem',
@@ -507,9 +506,9 @@ const Contact = () => {
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '1.5rem',
-                  padding: '0.5rem 0.75rem',
+                  padding: 'clamp(0.4rem, 0.8vw, 0.5rem) clamp(0.6rem, 1.2vw, 0.75rem)',
                   color: 'rgba(255, 255, 255, 0.9)',
-                  fontSize: '0.75rem',
+                  fontSize: 'clamp(0.65rem, 1.2vw, 0.75rem)',
                   fontFamily: 'monospace'
                 }}>
                   hello@luminarix.com
@@ -519,7 +518,7 @@ const Contact = () => {
               {/* Partner with us */}
               <div style={{ flex: '1', textAlign: 'center' }}>
                 <div style={{ 
-                  fontSize: '0.65rem', 
+                  fontSize: 'clamp(0.6rem, 1.2vw, 0.65rem)', 
                   color: 'rgba(255, 255, 255, 0.6)', 
                   textTransform: 'uppercase',
                   marginBottom: '0.5rem',
@@ -531,9 +530,9 @@ const Contact = () => {
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '1.5rem',
-                  padding: '0.5rem 0.75rem',
+                  padding: 'clamp(0.4rem, 0.8vw, 0.5rem) clamp(0.6rem, 1.2vw, 0.75rem)',
                   color: 'rgba(255, 255, 255, 0.9)',
-                  fontSize: '0.75rem',
+                  fontSize: 'clamp(0.65rem, 1.2vw, 0.75rem)',
                   fontFamily: 'monospace'
                 }}>
                   partner@luminarix.com
@@ -543,7 +542,7 @@ const Contact = () => {
               {/* Work with us */}
               <div style={{ flex: '1', textAlign: 'center' }}>
                 <div style={{ 
-                  fontSize: '0.65rem', 
+                  fontSize: 'clamp(0.6rem, 1.2vw, 0.65rem)', 
                   color: 'rgba(255, 255, 255, 0.6)', 
                   textTransform: 'uppercase',
                   marginBottom: '0.5rem',
@@ -555,9 +554,9 @@ const Contact = () => {
                   background: 'rgba(255, 255, 255, 0.05)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '1.5rem',
-                  padding: '0.5rem 0.75rem',
+                  padding: 'clamp(0.4rem, 0.8vw, 0.5rem) clamp(0.6rem, 1.2vw, 0.75rem)',
                   color: 'rgba(255, 255, 255, 0.9)',
-                  fontSize: '0.75rem',
+                  fontSize: 'clamp(0.65rem, 1.2vw, 0.75rem)',
                   fontFamily: 'monospace'
                 }}>
                   hr@luminarix.com
@@ -567,6 +566,64 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      {/* CSS for mobile responsiveness */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .contact-container {
+            flex-direction: column !important;
+            padding: 2rem 1rem !important;
+            gap: 2rem !important;
+          }
+          
+          .contact-info {
+            padding-top: 1rem !important;
+            text-align: center;
+          }
+          
+          .contact-form {
+            order: -1;
+          }
+          
+          .form-row {
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+          
+          .form-row > div {
+            width: 100% !important;
+          }
+          
+          .contact-options {
+            flex-direction: column !important;
+            gap: 1rem !important;
+          }
+          
+          .contact-options > div {
+            flex: none !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .contact-container {
+            padding: 1.5rem 1rem !important;
+            gap: 1.5rem !important;
+          }
+          
+          .contact-info h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem) !important;
+            margin-bottom: 1.5rem !important;
+          }
+          
+          .contact-info > div {
+            gap: 1rem !important;
+          }
+          
+          .contact-form form {
+            padding: 1.5rem !important;
+          }
+        }
+      `}</style>
     </div>
   );
 };
