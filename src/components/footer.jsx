@@ -50,8 +50,6 @@ const Footer = () => {
           zIndex: -1
         }}></div>
         
-
-        
         {/* Abstract glossy shapes overlay */}
         <div style={{
           position: 'absolute',
@@ -140,9 +138,8 @@ const Footer = () => {
         zIndex: 10
       }}>
         
-        
         {/* Middle Section - Information Columns */}
-        <div style={{ 
+        <div className="footer-columns" style={{ 
           display: 'grid', 
           gridTemplateColumns: 'repeat(auto-fit, minmax(min(80vw, 250px), 1fr))', 
           gap: 'clamp(2rem, 4vw, 3rem)',
@@ -152,23 +149,24 @@ const Footer = () => {
         }}>
           
           {/* About Us Column */}
-          <div>
+          <div className="footer-column">
             <h3 style={{ 
-              fontSize: '1.125rem', 
+              fontSize: 'clamp(1rem, 2vw, 1.125rem)', 
               fontWeight: '600', 
-              marginBottom: '1.5rem',
+              marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
               color: '#ffffff'
             }}>
               About Us
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.75rem, 1.5vw, 1rem)' }}>
               <div 
                 style={{ 
                   display: 'flex', 
                   alignItems: 'center', 
                   gap: '0.5rem',
                   cursor: 'pointer',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.color = '#00d4aa';
@@ -186,11 +184,21 @@ const Footer = () => {
                 <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>hello@luminarix.com</span>
                 <span style={{ color: '#00d4aa', fontSize: '0.875rem' }}>→</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <div style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '0.5rem',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>
                 <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>+91 9027224030</span>
                 <span style={{ color: '#00d4aa', fontSize: '0.875rem' }}>→</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <div style={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                gap: '0.5rem',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>
                 <span style={{ color: 'rgba(255, 255, 255, 0.8)' }}>70-72 Sector 63 Noida</span>
                 <span style={{ color: '#00d4aa', fontSize: '0.875rem' }}>→</span>
               </div>
@@ -198,23 +206,48 @@ const Footer = () => {
           </div>
 
           {/* Links Column */}
-          <div>
+          <div className="footer-column">
             <h3 style={{ 
-              fontSize: '1.125rem', 
+              fontSize: 'clamp(1rem, 2vw, 1.125rem)', 
               fontWeight: '600', 
-              marginBottom: '1.5rem',
+              marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
               color: '#ffffff'
             }}>
               Links
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Work</a>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Services</a>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Culture</a>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Blog</a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Work</a>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Services</a>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Culture</a>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Blog</a>
               <a 
                 href="#contact" 
-                style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}
+                style={{ 
+                  color: 'rgba(255, 255, 255, 0.8)', 
+                  textDecoration: 'none', 
+                  transition: 'color 0.3s ease',
+                  fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+                }}
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('contact').scrollIntoView({ 
@@ -229,44 +262,84 @@ const Footer = () => {
           </div>
 
           {/* Social Media Column */}
-          <div>
+          <div className="footer-column">
             <h3 style={{ 
-              fontSize: '1.125rem', 
+              fontSize: 'clamp(1rem, 2vw, 1.125rem)', 
               fontWeight: '600', 
-              marginBottom: '1.5rem',
+              marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
               color: '#ffffff'
             }}>
               Social Media
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Facebook</a>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Instagram</a>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Linkedin</a>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Behance</a>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Dribble</a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Facebook</a>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Instagram</a>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Linkedin</a>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Behance</a>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Dribble</a>
             </div>
           </div>
 
           {/* Legal Column */}
-          <div>
+          <div className="footer-column">
             <h3 style={{ 
-              fontSize: '1.125rem', 
+              fontSize: 'clamp(1rem, 2vw, 1.125rem)', 
               fontWeight: '600', 
-              marginBottom: '1.5rem',
+              marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
               color: '#ffffff'
             }}>
               Legal
             </h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Terms of Use</a>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Privacy Policy</a>
-              <a href="#" style={{ color: 'rgba(255, 255, 255, 0.8)', textDecoration: 'none', transition: 'color 0.3s ease' }}>Cookie Policy</a>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'clamp(0.5rem, 1vw, 0.75rem)' }}>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Terms of Use</a>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Privacy Policy</a>
+              <a href="#" style={{ 
+                color: 'rgba(255, 255, 255, 0.8)', 
+                textDecoration: 'none', 
+                transition: 'color 0.3s ease',
+                fontSize: 'clamp(0.875rem, 1.5vw, 1rem)'
+              }}>Cookie Policy</a>
             </div>
           </div>
         </div>
 
         {/* Bottom Section - Branding and Copyright */}
-        <div style={{ 
+        <div className="footer-bottom" style={{ 
           display: 'flex', 
           justifyContent: 'space-between', 
           alignItems: 'center',
@@ -276,7 +349,7 @@ const Footer = () => {
         }}>
           {/* Company Logo */}
           <div style={{ 
-            fontSize: 'clamp(1.25rem, 2vw, 1.5rem)', 
+            fontSize: 'clamp(1.125rem, 2vw, 1.5rem)', 
             fontWeight: 'bold',
             color: '#ffffff'
           }}>
@@ -293,6 +366,41 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* CSS for mobile responsiveness */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .footer-columns {
+            grid-template-columns: 1fr !important;
+            gap: 2rem !important;
+            text-align: center;
+          }
+          
+          .footer-column {
+            padding: 1rem 0;
+          }
+          
+          .footer-bottom {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 1rem !important;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .footer-columns {
+            gap: 1.5rem !important;
+          }
+          
+          .footer-column h3 {
+            margin-bottom: 1rem !important;
+          }
+          
+          .footer-column > div {
+            gap: 0.75rem !important;
+          }
+        }
+      `}</style>
     </footer>
   );
 };
